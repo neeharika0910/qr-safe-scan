@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Aura</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background-animation"></div>
+
+<div class="app-container">
+
+    <div class="card">
+
+        <h1 class="title">✨ QR SafeScan</h1>
+        <p class="subtitle">QR Code phishing Risk Analysis Code</p>
+
+        <div class="upload-section">
+            <input type="file" id="qr-input" accept="image/*">
+
+            <div id="drop-zone">
+                <div class="icon">📷</div>
+                <p>Upload or Drag & Drop QR Code</p>
+                <span>Click to browse files</span>
+            </div>
+        </div>
+
+        <div id="result" class="hidden fade-in">
+
+            <h2>Scan Result</h2>
+
+            <div class="decoded-box">
+                <p id="decoded-text"></p>
+            </div>
+
+            <div id="risk-output"></div>
+
+            <div class="button-group">
+                <button id="copy-url-btn">Copy URL</button>
+                <button id="download-report-btn">Download Report</button>
+                <button id="clear-btn">Clear</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
